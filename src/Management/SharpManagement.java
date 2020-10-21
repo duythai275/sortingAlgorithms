@@ -129,5 +129,7 @@ public class SharpManagement {
 		}
 		
 		System.out.println("This sorting has taken " + this.timing);
+		System.out.println("Max Value: " + sharpArray[0]);
+		System.out.println("Max Value: " + sharpArray[sharpArray.length - 1]);
 	}
 }
