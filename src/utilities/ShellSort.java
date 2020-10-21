@@ -12,7 +12,7 @@ public class ShellSort {
 			for ( int i = gap; i < array.length; i++ ) {
 				T key = array[i];
 				int j = i;
-				for ( ; j >= gap && comp.compare(key, array[j - gap]) > 0 ; j -= gap ) {
+				for ( ; j >= gap && comp.compare(array[j - gap], key) > 0 ; j -= gap ) {
 					array[j] = array[j - gap];
 				}
 				array[j] = key;
@@ -30,7 +30,7 @@ public class ShellSort {
 			for ( int i = gap; i < array.length; i++ ) {
 				T key = array[i];
 				int j = i;
-				for ( ; j >= gap && ((Sharp) key).compareTo((Sharp) array[j - gap]) > 0 ; j -= gap ) {
+				for ( ; j >= gap && ((Sharp) array[j - gap]).compareTo((Sharp) key) > 0 ; j -= gap ) {
 					array[j] = array[j - gap];
 				}
 				array[j] = key;

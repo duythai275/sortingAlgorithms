@@ -129,7 +129,7 @@ public class SharpManagement {
 		}
 		
 		System.out.println("This sorting has taken " + this.timing);
-		System.out.println("Max Value: " + sharpArray[0]);
-		System.out.println("Max Value: " + sharpArray[sharpArray.length - 1]);
+		System.out.println("Max Value: " + ( this.type.toUpperCase().equals("H") ? sharpArray[0].getHeight() : this.type.toUpperCase().equals("A") ? sharpArray[0].getBaseArea() : sharpArray[0].getVolume() ) );
+		System.out.println("Min Value: " + ( this.type.toUpperCase().equals("H") ? sharpArray[sharpArray.length - 1].getHeight() : this.type.toUpperCase().equals("A") ? sharpArray[sharpArray.length - 1].getBaseArea() : sharpArray[sharpArray.length - 1].getVolume() ));
 	}
 }

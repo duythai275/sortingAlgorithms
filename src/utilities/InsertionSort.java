@@ -10,7 +10,7 @@ public class InsertionSort {
 		for ( int i = 1; i < array.length; i++ ) {
 			T key = array[i];
 			int j = i - 1;
-			for ( ; j >= 0 && comp.compare(key, array[j]) > 0 ; j-- ) {
+			for ( ; j >= 0 && comp.compare(array[j], key) > 0 ; j-- ) {
 				array[j + 1] = array[j];
 			}
 			array[j + 1] = key;
@@ -25,7 +25,7 @@ public class InsertionSort {
 		for ( int i = 1; i < array.length; i++ ) {
 			T key = array[i];
 			int j = i - 1;
-			for ( ; j >= 0 && ((Sharp) key).compareTo((Sharp) array[j]) > 0 ; j-- ) {
+			for ( ; j >= 0 && ((Sharp) array[j]).compareTo((Sharp) key) > 0 ; j-- ) {
 				array[j + 1] = array[j];
 			}
 			array[j + 1] = key;
