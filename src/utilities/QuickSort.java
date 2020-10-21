@@ -5,14 +5,20 @@ import problemDomain.*;
 
 public class QuickSort {
 	
-	public static <T> void Sort( T[] array )
+	public static <T> long Sort( T[] array )
 	{
+		long start = System.currentTimeMillis();
 		quickSort(array,0,array.length - 1, null);
+		long end = System.currentTimeMillis();
+		return ( end - start );
 	}
 	
-	public static <T> void Sort( T[] array, Comparator<? super T> comp )
+	public static <T> long Sort( T[] array, Comparator<? super T> comp )
 	{
+		long start = System.currentTimeMillis();
 		quickSort(array,0,array.length - 1,comp);
+		long end = System.currentTimeMillis();
+		return ( end - start );
 	}
 	
 	public static <T> void quickSort( T[] array, int left, int right, Comparator<? super T> comp ) {

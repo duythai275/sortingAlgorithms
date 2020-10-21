@@ -86,7 +86,7 @@ public class SharpManagement {
 				this.timing = ShellSort.Sort(sharpArray, bc);
 			}
 		} else if ( this.type.toUpperCase().equals("V") ) {
-			VolumnCompare vc =  new VolumnCompare();
+			VolumeCompare vc =  new VolumeCompare();
 			if ( this.sort.toUpperCase().equals("B") ) {
 				this.timing = BubbleSort.Sort(sharpArray, vc);
 			} else if ( this.sort.toUpperCase().equals("S") ) {
@@ -128,6 +128,6 @@ public class SharpManagement {
 				System.out.println(sharp.getVolumn());
 		}
 		
-		System.out.println(this.timing);
+		System.out.println("This sorting has taken " + this.timing);
 	}
 }
