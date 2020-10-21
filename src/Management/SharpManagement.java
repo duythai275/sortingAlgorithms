@@ -125,7 +125,7 @@ public class SharpManagement {
 			else if ( this.type.toUpperCase().equals("A") )
 				System.out.println(sharp.getBaseArea());
 			else if ( this.type.toUpperCase().equals("V") )
-				System.out.println(sharp.getVolumn());
+				System.out.println(sharp.getVolume());
 		}
 		
 		System.out.println("This sorting has taken " + this.timing);
