@@ -3,8 +3,20 @@ package utilities;
 import java.util.Comparator;
 import problemDomain.*;
 
+/**
+ * This is algorythm of Quick Sort
+ * 
+ * @author Thai Nguyen
+ * @version Oct 21, 2020
+ */
 public class QuickSort {
-	
+	/**
+	 * Main method to invoke Quick Sort
+	 * 
+	 * @param <T>
+	 * @param array Array of T for sorting
+	 * @return run-time of sorting
+	 */
 	public static <T> long Sort( T[] array )
 	{
 		long start = System.currentTimeMillis();
@@ -13,6 +25,14 @@ public class QuickSort {
 		return ( end - start );
 	}
 	
+	/**
+	 * Main method to invoke Quick Sort
+	 * 
+	 * @param <T>
+	 * @param array Array of T for sorting
+	 * @param comp Comparator use for sorting
+	 * @return run-time of sorting
+	 */
 	public static <T> long Sort( T[] array, Comparator<? super T> comp )
 	{
 		long start = System.currentTimeMillis();
@@ -21,6 +41,15 @@ public class QuickSort {
 		return ( end - start );
 	}
 	
+	/**
+	 * Divide array
+	 * 
+	 * @param <T>
+	 * @param array Array of T for sorting
+	 * @param left Left index
+	 * @param right Right index
+	 * @param comp Comparator use for sorting
+	 */
 	public static <T> void quickSort( T[] array, int left, int right, Comparator<? super T> comp ) {
 		if ( left < right ) {
 			int middle = getMiddle(array, left, right, comp);
@@ -29,6 +58,16 @@ public class QuickSort {
 		}
 	}
 	
+	/**
+	 * Get pivot node
+	 * 
+	 * @param <T>
+	 * @param array Array of T for sorting
+	 * @param left Left index
+	 * @param right Right index
+	 * @param comp Comparator use for sorting
+	 * @return index of pivot node
+	 */
 	public static <T> int getMiddle( T[] array, int left, int right, Comparator<? super T> comp ) {
 		T temp = array[left];
 		while ( left < right ) {

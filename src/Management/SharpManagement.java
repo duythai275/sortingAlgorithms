@@ -8,13 +8,44 @@ import java.io.IOException;
 import problemDomain.*;
 import utilities.*;
 
+/**
+ * This class is for read data file, load data, sorting and print result of sorting
+ * 
+ * @author Thai Nguyen
+ * @version Oct 21, 2020
+ */
 public class SharpManagement {
+	/**
+	 * Variable for filename
+	 */
 	private String file;
+	
+	/**
+	 * Variable for selecting a Sort
+	 */
 	private String sort;
+	
+	/**
+	 * Variable for sorting by
+	 */
 	private String type;
+	
+	/**
+	 * Variable for filling with sharps in reading file
+	 */
 	private Sharp sharpArray[];
+	
+	/**
+	 * Variable for tracking run-time of sorting
+	 */
 	private long timing;
 	
+	/**
+	 * Constructor for set up parameters, read and load sharps from files, and sorting
+	 * @param file Filename
+	 * @param sort Name of sorting
+	 * @param type Name of attribute use for sorting
+	 */
 	public SharpManagement(String file, String sort, String type) {
 		super();
 		this.file = file;
@@ -27,6 +58,9 @@ public class SharpManagement {
 		sort();
 	}
 	
+	/**
+	 * Read data from text file
+	 */
 	private void readFile() {
 		try {
 			BufferedReader br = new BufferedReader( new FileReader("res/"+this.file));
@@ -45,6 +79,10 @@ public class SharpManagement {
 		}
 	}
 	
+	/**
+	 * Using data from text file to add sharps into the sharp array
+	 * @param line Data from text file that read by readFile method
+	 */
 	private void loadSharps(String line) {
 		String[] sharps = line.split(" ");
 		sharpArray = new Sharp[Integer.parseInt(sharps[0])];
@@ -68,6 +106,9 @@ public class SharpManagement {
 		}
 	}
 	
+	/**
+	 * Sorting with parameters Sort, Type
+	 */
 	private void sort () {
 
 		if ( this.type.toUpperCase().equals("A") ) {
@@ -118,6 +159,9 @@ public class SharpManagement {
 		
 	}
 	
+	/**
+	 * Print result after sorting. It performs Largest to smallest value, and run-time for sorting
+	 */
 	public void printResult () {
 		for ( Sharp sharp : sharpArray ) {
 			if ( this.type.toUpperCase().equals("H") )

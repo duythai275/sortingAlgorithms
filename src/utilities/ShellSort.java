@@ -4,7 +4,21 @@ import java.util.Comparator;
 
 import problemDomain.Sharp;
 
+/**
+ * This is algorythm of Shell Sort
+ * 
+ * @author Thai Nguyen
+ * @version Oct 21, 2020
+ */
 public class ShellSort {
+	/**
+	 * Main method to invoke Shell Sort
+	 * 
+	 * @param <T>
+	 * @param array Array of T for sorting
+	 * @param comp Comparator use for sorting
+	 * @return run-time of sorting
+	 */
 	public static <T> long Sort( T[] array, Comparator<? super T> comp ) {
 		long start = System.currentTimeMillis();
 		
@@ -23,6 +37,13 @@ public class ShellSort {
 		return ( end - start );
 	}
 	
+	/**
+	 * Main method to invoke Shell Sort
+	 * 
+	 * @param <T>
+	 * @param array Array of T for sorting
+	 * @return run-time of sorting
+	 */
 	public static <T> long Sort( T[] array ) {
 		long start = System.currentTimeMillis();
 		

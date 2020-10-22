@@ -3,7 +3,21 @@ package utilities;
 import java.util.Comparator;
 import problemDomain.*;
 
+/**
+ * This is algorythm of Insertion Sort
+ * 
+ * @author Thai Nguyen
+ * @version Oct 21, 2020
+ */
 public class InsertionSort {
+	/**
+	 * Main method to invoke Insertion Sort
+	 * 
+	 * @param <T>
+	 * @param array Array of T for sorting
+	 * @param comp Comparator use for sorting
+	 * @return run-time of sorting
+	 */
 	public static <T> long Sort( T[] array, Comparator<? super T> comp )
 	{
 		long start = System.currentTimeMillis();
@@ -19,6 +33,13 @@ public class InsertionSort {
 		return ( end - start );
 	}
 	
+	/**
+	 * Main method to invoke Insertion Sort
+	 * 
+	 * @param <T>
+	 * @param array Array of T for sorting
+	 * @return run-time of sorting
+	 */
 	public static <T> long Sort( T[] array )
 	{
 		long start = System.currentTimeMillis();
